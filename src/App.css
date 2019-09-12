@@ -33,11 +33,20 @@ p {
 }
 
 img {
-  margin-left: 5%;
-  border-radius: 3%;
+  margin-left: 25%;
   box-shadow: 5px 5px 10px black;
-  max-width: 90%;
-  max-height: 40%;
+  max-width: 50%;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+img:hover {
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 1%;
+  max-width: 98%;
 }
 
 .nasaList {
@@ -50,4 +59,10 @@ img {
   display: flex;
   justify-content: center;
   font-family: "Roboto Mono", monospace;
+}
+
+.loader {
+  font-size: 0.5rem;
+  text-align: center;
+  margin-top: 30%;
 }

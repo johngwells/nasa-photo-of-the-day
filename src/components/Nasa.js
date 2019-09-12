@@ -8,24 +8,26 @@ import Spinner from './Spinner';
 function Nasa() {
   const [nasaPhotoData, setNasaPhotoData] = useState([]);
   const [date, setDate] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=RvkEnkyfMa9Kyeuint7mdZ9et95NSW4eQpCbQpbX&date=${date}`)
       .then(response => {
-        // const photos = response.data;
-        // console.log('response', photos);    
+        setLoading(true);
         setNasaPhotoData(response.data);
       })
       .catch(error => {
         console.log('No data returned', error);
     })
+    setLoading(false)
   }, [date]);
 
   const changeHandler = e => {
     setDate(e.target.value);
   }
 
+  if (loading) {
   return (
     <div>
       <form className='form'>
@@ -48,6 +50,9 @@ function Nasa() {
       />
     </div>
   );
+  } else {
+    return <Spinner />
+  }
 }
 
 
