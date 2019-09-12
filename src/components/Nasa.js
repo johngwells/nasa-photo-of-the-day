@@ -5,6 +5,7 @@ import NasaList from './NasaList';
 
 import Spinner from './Spinner';
 
+
 function Nasa() {
   const [nasaPhotoData, setNasaPhotoData] = useState([]);
   const [date, setDate] = useState('');
@@ -19,8 +20,9 @@ function Nasa() {
       })
       .catch(error => {
         console.log('No data returned', error);
+        setLoading(true);
     })
-    setLoading(false)
+    setLoading(false);
   }, [date]);
 
   const changeHandler = e => {
