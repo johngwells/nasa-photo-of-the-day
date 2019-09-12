@@ -45,3 +45,9 @@ img {
   justify-content: center;
   margin-left: 25%;
 }
+
+.form {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+}
