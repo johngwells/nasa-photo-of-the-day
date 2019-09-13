@@ -34,11 +34,12 @@ img {
   margin-left: 15%;
   box-shadow: 3px 3px 5px #2a6592;
   max-width: 75%;
+  border-radius: 20px;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  opacity: .5;
+  opacity: .3;
 }
 
 img:hover {
