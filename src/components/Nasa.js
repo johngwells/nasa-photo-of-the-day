@@ -7,13 +7,17 @@ import NasaList from './NasaList';
 import Spinner from './Spinner';
 
 const StyledDate = styled.input`
+  display: flex;
+  justify-content: right;
+  align-items: right;
   appearance: none;
-  color: black;
+  color: #db9833;
   box-sizing: border-box;
   border: 1px solid black;
   background: transparent;
   font-size: 1.8rem;
   padding: 3px;
+  text-shadow: 1px 1px 5px #db9833;
   ::-webkit-datetime-edit-text { padding: 0 0.5rem; }
   ::-webkit-datetime-edit-month-field { text-transform: uppercase; }
   ::-webkit-datetime-edit-day-field { text-transform: uppercase; }
@@ -23,7 +27,10 @@ const StyledDate = styled.input`
 `
 
 const Styledh1 = styled.h1`
-  padding: 25px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 15px;
+  opacity: .2;
 `
 
 function Nasa() {
@@ -52,9 +59,8 @@ function Nasa() {
   if (loading) {
   return (
     <div>
-
       <form className='form'>
-        <label>Missed a day? Go back in time =></label>
+        <label></label>
         <StyledDate
           className='input'
           name='date'
@@ -64,7 +70,7 @@ function Nasa() {
         />
       </form>
 
-      <Styledh1>NASA's Astronomy Picture of the Day!</Styledh1>
+      <Styledh1>NASA - Astronomy Daily Photo</Styledh1>
       <NasaList
         hdurl={nasaPhotoData.hdurl}
         title={nasaPhotoData.title}

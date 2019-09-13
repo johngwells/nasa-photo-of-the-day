@@ -5,8 +5,10 @@ import Nasa from './components/Nasa';
 
 function App() {
   return (
-    <div>
-      <Nasa />
+    <div className='stars'>
+      <div className='twinkling'>
+        <Nasa />
+      </div>
     </div>
   );
 }
