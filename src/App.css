@@ -54,6 +54,8 @@ img:hover {
 }
 
 .form {
+  /* display: flex;
+  justify-content: center; */
   margin-bottom: 50px;
   margin-left: 2%;
   font-family: "Roboto Mono", monospace;

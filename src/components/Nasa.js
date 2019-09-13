@@ -6,14 +6,20 @@ import NasaList from './NasaList';
 
 import Spinner from './Spinner';
 
+const StyledForm = styled.form`
+    @media only screen and (max-width: 500px) {
+    display: flex;
+    justify-content: center;
+    margin-right: 5%;
+  }
+`;
+
 const StyledDate = styled.input`
-  display: flex;
-  justify-content: right;
-  align-items: right;
+  margin-top: 15px;
   appearance: none;
   color: #db9833;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid #db9833;
   background: transparent;
   font-size: 1.8rem;
   padding: 3px;
@@ -24,13 +30,16 @@ const StyledDate = styled.input`
   ::-webkit-datetime-edit-year-field { text-transform: uppercase; }
   ::-webkit-inner-spin-button { display: none; }
   ::-webkit-calendar-picker-indicator { background: transparent;}
-`
+`;
 
 const Styledh1 = styled.h1`
   color: white;
   font-size: 1.5rem;
   padding: 15px;
   opacity: .2;
+  @media only screen and (max-width: 500px) {
+    font-size: 1.4rem;
+  }
 `
 
 function Nasa() {
@@ -59,7 +68,7 @@ function Nasa() {
   if (loading) {
   return (
     <div>
-      <form className='form'>
+      <StyledForm className='form'>
         <label></label>
         <StyledDate
           className='input'
@@ -68,7 +77,7 @@ function Nasa() {
           value={date}
           onChange={changeHandler}
         />
-      </form>
+      </StyledForm>
 
       <Styledh1>NASA - Astronomy Daily Photo</Styledh1>
       <NasaList
