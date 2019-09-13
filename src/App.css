@@ -54,8 +54,6 @@ img:hover {
 }
 
 .form {
-  /* display: flex;
-  justify-content: center; */
   margin-bottom: 50px;
   margin-left: 2%;
   font-family: "Roboto Mono", monospace;
@@ -67,6 +65,7 @@ label {
 
 .loader {
   font-size: 0.5rem;
+  color: #db9833;
   text-align: center;
   margin-top: 30%;
 }
