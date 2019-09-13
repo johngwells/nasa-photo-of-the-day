@@ -15,10 +15,10 @@ const StyledList = styled.div`
 
 const StyledExplanation = styled.p`
   @media only screen and (max-width: 500px) {
-      margin-left: 4%;
-      margin-right: 4%;
-      width: 95%;
-    }
+    margin-left: 4%;
+    margin-right: 4%;
+    width: 95%;
+  }
 `;
 
 const Footer = styled.p`
@@ -33,6 +33,10 @@ const Footer = styled.p`
   a:hover {
     color: #db9833;
   }
+  @media only screen and (max-width: 500px) {
+    margin-left: 0px;
+    width: 100%;
+    }
 `
 
 const StyledH1 = styled.h1`
@@ -45,16 +49,37 @@ const StyledH1 = styled.h1`
     width: 95%;
   }
 `
+const StyledH3 = styled.h3`
+  margin-left: 50px;
+  @media only screen and (max-width: 500px) {
+    margin-top: 50px;
+    margin-left: 15px;
+    font-size: .9rem;
+  }
+`;
+
+const StyledH5 = styled.h5`
+  @media only screen and (max-width: 500px) {
+    margin-left: 15px;
+  }
+`;
+
+const StyledImg = styled.img`
+  @media only screen and (max-width: 500px) {
+    margin-left: 20px;
+    max-width: 90%;
+  }
+`;
 
 function NasaList({ hdurl, title, copyright, date, explanation }) {
   return (
     <div className='nasaList'>
-      <img src={hdurl} className='flip-scale-up-diag-2' alt='nasa space'/>
+      <StyledImg src={hdurl} className='flip-scale-up-diag-2' alt='nasa space'/>
       <StyledList>
       <StyledH1>{title}</StyledH1>
-      <h3>Photo by: {copyright}</h3>
       <StyledExplanation className='scale-in-hor-left'>{explanation}</StyledExplanation>
-      <h5>{date}</h5>
+      <StyledH3>Photo by: {copyright}</StyledH3>
+      <StyledH5>{date}</StyledH5>
       </StyledList>
       <Footer><a href="mailto:johngwells@gmail.com">©John Wells</a> - <a href="https://twitter.com/johnwellsio">FullStack Developer</a></Footer>
     </div>

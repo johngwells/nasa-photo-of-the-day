@@ -31,13 +31,14 @@ p {
 }
 
 img {
-  margin-left: 25%;
+  margin-left: 15%;
   box-shadow: 3px 3px 5px #2a6592;
-  max-width: 50%;
+  max-width: 75%;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  opacity: .5;
 }
 
 img:hover {
@@ -45,6 +46,7 @@ img:hover {
   margin-right: 1%;
   border-radius: 1%;
   max-width: 98%;
+  opacity: 1;
 }
 
 .nasaList {
