@@ -15,6 +15,7 @@ const StyledForm = styled.form`
 `;
 
 const StyledDate = styled.input`
+  margin-left: 5px;
   margin-top: 15px;
   appearance: none;
   color: #db9833;
@@ -69,7 +70,6 @@ function Nasa() {
   return (
     <div>
       <StyledForm className='form'>
-        <label></label>
         <StyledDate
           className='input'
           name='date'
@@ -93,6 +93,5 @@ function Nasa() {
     return <Spinner />
   }
 }
-
 
 export default Nasa;

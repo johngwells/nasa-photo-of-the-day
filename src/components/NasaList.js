@@ -75,12 +75,12 @@ function NasaList({ hdurl, title, copyright, date, explanation }) {
   return (
     <div className='nasaList'>
       <StyledImg src={hdurl} className='flip-scale-up-diag-2' alt='nasa space'/>
-      <StyledList>
-      <StyledH1>{title}</StyledH1>
-      <StyledExplanation className='scale-in-hor-left'>{explanation}</StyledExplanation>
-      <StyledH3>Photo by: {copyright}</StyledH3>
-      <StyledH5>{date}</StyledH5>
-      </StyledList>
+        <StyledList>
+          <StyledH1>{title}</StyledH1>
+          <StyledExplanation className='scale-in-hor-left'>{explanation}</StyledExplanation>
+          <StyledH3>Photo by: {copyright}</StyledH3>
+          <StyledH5>{date}</StyledH5>
+        </StyledList>
       <Footer><a href="mailto:johngwells@gmail.com">©John Wells</a> - <a href="https://twitter.com/johnwellsio">FullStack Developer</a></Footer>
     </div>
   );
